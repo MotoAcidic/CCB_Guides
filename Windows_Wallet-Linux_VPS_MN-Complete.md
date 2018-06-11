@@ -1,29 +1,29 @@
-# IPSUM Windows and Linux Wallet - Linux VPS Masternode Instructions
+# CCB Windows and Linux Wallet - Linux VPS Masternode Instructions
 
 ## Requirements:
 * A local Masternode Wallet with the required Masternode collateral (5000 IPS).
 * A GNU/Linux VPS with a Static IP Address referred as __<your vps IP>__ in this document.
 
 * For this guide we are using Ubuntu 16.04 on the VPS, but any distro should do as the executables are statically linked. 
-* A 25GB SSD and 1000GB bandwidth will suffice (suggested vultr or digital ocean; use those referral links to support IPS: [vultr](https://www.vultr.com/?ref=7426211) and [Digital Ocean](https://m.do.co/c/0d726bd8cfdc)).
+* A 25GB SSD and 1000GB bandwidth will suffice (suggested vultr or digital ocean; use those referral links to support IPS: [vultr](https://www.vultr.com/?ref=7424168).
 * Select IPV6 and Private Networking. I will leave DDoS and Automatic backups to you. 
 * Leave SSH Keys and Startup Script blank.
 
 
 ## Setup Wallet:
 
-* Download the latest wallet for your OS [Releases](https://github.com/ipsum-network/ips/releases)
+* Download the latest wallet for your OS [Releases](https://github.com/CryptoCashBack/CryptoCashBack/releases)
 * For Windows users:
   * run the installer, and leave everything as default.
 * For GNU/Linux users:
-  * untar the archive where you please (you may copy ipsd and ips-cli in /usr/local/bin for easy access)
+  * untar the archive where you please 
 * Run the qt, then close it again.
 
 ### Syncing
 
-* Open the ips.conf file. It can be found in C:/Users/<Your User>/AppData/Roaming/IPS.
-* Copy the addnodes from [here](https://github.com/ipsum-network/seeds/blob/master/README.md) into this file, then save it.
-* Re-open your ips-qt. It will now sync much more quickly.
+* Open the ips.conf file. It can be found in C:/Users/<Your User>/AppData/Roaming/CCB.
+* Copy the addnodes from [here](https://github.com/MotoAcidic/CCB_Guides/blob/master/Seeds) into this file, then save it.
+* Re-open your ccb-qt. It will now sync much more quickly.
 
 ### Addresses
 
@@ -41,7 +41,7 @@
 
 ### Coin Control
 
-* Coin Control is how we will create a transaction of *exactly* 5000 IPS. This is necessary, as any other amount is ineligible for a MN status.
+* Coin Control is how we will create a transaction of *exactly* 5000 CCB. This is necessary, as any other amount is ineligible for a MN status.
 * Copy your MN1 address to the clipboard.
 * Open the send tab.
 * Choose “Inputs” at the top left of the window.
