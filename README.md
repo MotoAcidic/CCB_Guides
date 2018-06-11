@@ -1,28 +1,28 @@
-# IPSUM Staking and Masternode
+# CCB Staking and Masternode
 *These guides are designed to assist you in installing and configuring an IPSUM staking wallet or IPSUM masternode.* 
 
 ## Requirements
 
 ### Staking
-  * The IPS coins you intent to stake must have 101 confirmations
+  * The CCB coins you intent to stake must have 101 confirmations
   * At least 25GB of free space
   * Synchronized IPSUM wallet
 
 ### Masternode
-  * Exactly 5000.00 IPS as collateral
+  * Exactly 5000.00 CCB as collateral
   * An internet addressable IP address
-  * Port 22331 forwarded
+  * Port 19551 forwarded
   * At least 25GB of free space
-  * Synchronized IPSUM wallet
+  * Synchronized CCB wallet
   
 ## Recommendations
 
 ### Staking
-  * At least 10000 IPS, anything less than that you are better off running a masternode
+  * At least 10000 CCB, anything less than that you are better off running a masternode
   * Dedicated machine for your wallet, as you want to keep it online as much as possible
   
 ### Masternode
-  * Dedicated Linux (Ubuntu 16.04) VPS from [Vultr](https://www.vultr.com/?ref=7426211) or [Digital Ocean](https://m.do.co/c/0d726bd8cfdc)
+  * Dedicated Linux (Ubuntu 16.04) VPS from [Vultr](https://www.vultr.com/?ref=7424168) 
 
 ## Staking Installation Types
 
