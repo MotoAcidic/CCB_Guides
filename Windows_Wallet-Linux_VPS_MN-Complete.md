@@ -58,7 +58,7 @@
 * From the tools menu, open the __Debug Console__ and __open the masternode configuration file__.
 * In your masternode configuration file, input a new line:
 
-```MN1 <your vps IP>:22331 ```
+```MN1 <your vps IP>:19551 ```
 
 * In the debug console, input the command:
 
@@ -73,7 +73,7 @@
   Add this to your masternode configuration file which should now look like this:
 ```MN1 <your vps IP>:22331 <masternode priv key> <transaction hash> <index>```
   which might be something similar to the following line:
-```MN1 111.222.111.222:22331 df1265465465432KSJBFNSKJ aLJKHVBSFDLJHGbcdeSFKJSFf654321abcdef321654abcdef321654 1```
+```MN1 111.222.111.222:19551 df1265465465432KSJBFNSKJ aLJKHVBSFDLJHGbcdeSFKJSFf654321abcdef321654abcdef321654 1```
 * Save and close your masternode configuration file.
 * Close the debug console.
 
