@@ -13,15 +13,23 @@
   sudo apt-get upgrade
   ```
   
-## Download the IPSUM Linux Daemon
+## Download the CCB Linux Daemon
 
   * From the terminal session, run the following command
   ```
-  wget https://github.com/ipsum-network/ips/releases/download/v3.1.0.0/ips-3.1.0-linux.tar.gz
+  wget https://github.com/CryptoCashBack-Hub/CCB/releases/download/v1.0.0.1/CryptoCashBack-Linux.tar.gz
   ```
   * From the terminal session, run the following command
   ```
-  tar -xvf ips-3.1.0-linux.tar.gz
+  tar -xvf CryptoCashBack-Linux.tar.gz
+  ```
+    * From the terminal session, run the following command
+  ```
+  wget https://github.com/CryptoCashBack-Hub/CCB/releases/download/v1.0.0.1/CryptoCashBack-Linux-binaries.tar.gz
+  ```
+  * From the terminal session, run the following command
+  ```
+  tar -xvf CryptoCashBack-Linux-binaries.tar.gz
   ```
   
 ## Install IPSUM Linux Daemon Runtime Dependencies
@@ -42,8 +50,8 @@
 
 * From the terminal session, run the following commands
 ```
-mkdir -p ~/.ips
-nano ~/.ips/ips.conf
+mkdir -p ~/.cryptocashback
+nano ~/.cryptocashback/cryptocashback.conf
 ```
 
 * Now add the following lines to this file, replacing any < > field with your information
@@ -51,48 +59,51 @@ nano ~/.ips/ips.conf
 ```
 rpcuser=<rpcusername>
 rpcpassword=<rpcpassword>
-rpcport=22332
+rpcport=19552
 listen=1
 server=1
 daemon=1
 staking=0
 rpcallowip=127.0.0.1
 logtimestamps=1
-masternode=1
-port=22331
-externalip=<externalip>:22331
-masternodeprivkey=<masternode private key>
+#masternode=1
+port=19551
+externalip=<externalip>:19551
+#masternodeprivkey=<masternode private key>
 ```
 
-* Get the latest node seeds from [here](https://github.com/ipsum-network/seeds/blob/master/README.md)
+* Get the latest node seeds from [here](https://github.com/CryptoCashBack-Hub/CCB_Guides/blob/master/Seeds)
 * Copy and paste the addnode lines into the bottom of this file
 * Save and Exit
 
-## Start the IPSUM Linux Daemon
+## Now make the swap file
+* From the terminal session, run the following commands
+```
+dd if=/dev/zero of=/swapfile bs=1024 count=2M
+```
+```
+chmod 600 /swapfile
+```
+```
+ mkswap /swapfile
+```
+```
+ swapon -a /swapfile
+
+```
+
+## Start the CCB Linux Daemon
 
 * From the terminal session, run the following commands
 ```
-./ips-3.1.0/bin/ipsd
+start CryptoCashBack.service
 ```
 
-## Wait for the IPSUM Linux Daemon to sync
+## Wait for the CCB Linux Daemon to sync
 
 * From the terminal session, run the following commands
 ```
-./ips-3.1.0/bin/ips-cli getinfo
+watch cryptocashback-cli getinfo
 ```
 * Compare the "Block Height" value with the latest from the [IPSUM block explorer](https://explorer.ipsum.network/). When those are the same, your daemon is synchronized 
 
-### Start your Linux VPS Masternode from Windows (For Windows Wallet Users)
-
-[Starting your Linux VPS Masternode from Windows](LINUX-MN-START-WINDOWS.md)
-
-### Start your Linux VPS masternode from Linux (For Linux Wallet Users)
-
-#### Hot Wallet
-
-Return back to the [Linux Hot Wallet Masternode Installation](LINUX-HOT.md)
-
-#### Cold Wallet
-
-Return back to the [Linux Cold Wallet Masternode Installation](LINUX-COLD.md)
